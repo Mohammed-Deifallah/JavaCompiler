@@ -1,0 +1,151 @@
+%{
+#include <cstdio>
+#include <iostream>
+using namespace std;
+
+#include "types.h"
+#include "myfunctions.hpp"
+
+Wrapper core;
+
+// stuff from flex that bison needs to know about:
+extern "C" int yylex();
+extern "C" int yyparse();
+extern "C" FILE *yyin;
+ 
+void yyerror(const char *s);
+
+int lineNumber = 0;
+%}
+
+// Bison fundamentally works by asking flex to get the next token, which it
+// returns as an object of type "yystype".  But tokens could be of any
+// arbitrary data type!  So we deal with that in Bison by defining a C union
+// holding each of the types of tokens that Flex could return, and have Bison
+// use that union instead of "int" for the definition of "yystype":
+%union {
+    int ival;
+    char cval;
+    float fval;
+    char * sval;
+    struct CodeNode *codeVal;
+    struct CodeTypeNode *codeTypeVal;
+}
+
+// define the "terminal symbol" token types I'm going to use (in CAPS
+// by convention), and associate each with a field of the union:
+%token <sval> NUM_T
+%token <sval> ID_T
+%token <sval> INT_T
+%token <sval> FLOAT_T
+%token <sval> BOOLEAN_T
+%token <sval> IF_T
+%token <sval> ELSE_T
+%token <sval> WHILE_T
+%token <sval> RELOP_T
+%token <sval> ASSIGN_T
+%token <cval> ADDOP_T
+%token <cval> MULOP_T
+
+
+%type <codeVal>         METHOD_BODY       
+%type <codeVal>         STATEMENT_LIST
+%type <codeVal>         STATEMENT
+%type <codeVal>         DECLARATION
+%type <codeVal>         IF
+%type <codeVal>         WHILE
+%type <codeVal>         ASSIGNMENT
+%type <sval>            PRIMITIVE_TYPE
+%type <codeTypeVal>     EXPRESSION
+%type <codeTypeVal>     SIMPLE_EXPRESSION
+%type <codeTypeVal>     TERM
+%type <codeTypeVal>     FACTOR
+
+%%
+// this is the actual grammar that bison will parse, but for right now it's just
+// something silly to echo to the screen what bison gets from flex.  We'll
+// make a real one shortly:
+
+METHOD_BODY: STATEMENT_LIST    {dd("METHOD_BODY: STATEMENT_LIST" << endl); $$->code = $1->code; core.printAll(); }
+    ;
+
+STATEMENT_LIST: STATEMENT          {dd("STATEMENT_LIST: STATEMENT" << endl); $$ = new CodeNode(); $$->code = $1->code; }
+    | STATEMENT_LIST STATEMENT    {dd("STATEMENT_LIST: STATEMENT_LIST STATEMENT" << endl); $$ = new CodeNode(); $$->code = $1->code + $2->code; }
+
+STATEMENT: DECLARATION    {dd("STATEMENT: DECLARATION" << endl); $$ = new CodeNode(); $$->code = $1->code; }
+    | IF                  {dd("STATEMENT: IF" << endl); $$ = new CodeNode(); $$->code = $1->code; }
+    | WHILE               {dd("STATEMENT: WHILE" << endl); $$ = new CodeNode(); $$->code = $1->code; }
+    | ASSIGNMENT          {dd("STATEMENT: ASSIGNMENT" << endl); $$ = new CodeNode(); $$->code = $1->code; }
+    ;
+
+DECLARATION: PRIMITIVE_TYPE ID_T ';'  {dd("DECLARATION" << endl); $$ = new CodeNode(); $$->code = ""; core.add_var($2 , $1); }
+    ;
+
+PRIMITIVE_TYPE: INT_T    {dd("PRIMITIVE_TYPE: INT_T" << endl); $$ = $1; }
+    | FLOAT_T            {dd("PRIMITIVE_TYPE: FLOAT_T" << endl); $$ = $1; }
+    ;
+
+IF: IF_T '(' EXPRESSION ')' '{' STATEMENT '}' {core.gen_goto();} ELSE_T '{' STATEMENT '}' 
+    {dd("IF" << endl); $$ = new CodeNode(); $$->code = $3->code + $6->code + $11->code; core.end_else(); }
+    ;
+
+
+WHILE: WHILE_T '(' {core.start_while();} EXPRESSION ')' '{' STATEMENT '}'
+    {dd("IF" << endl); $$ = new CodeNode(); $$->code = $4->code + $7->code + core.end_while(); }
+    ;
+
+
+ASSIGNMENT: ID_T ASSIGN_T EXPRESSION ';'
+    {dd("ASSIGNMENT" << endl); $$ = new CodeNode(); $$->code = $3->code + core.store_value($1); }
+    ;
+
+EXPRESSION: SIMPLE_EXPRESSION {dd("EXPRESSION: SIMPLE_EXPRESSION" << endl); $$ = new CodeTypeNode(); $$->code = $1->code; $$->type = $1->type; }
+    | SIMPLE_EXPRESSION RELOP_T SIMPLE_EXPRESSION  {core.cast($1->type , $3->type);core.cast($3->type , $1->type);}
+    {dd("EXPRESSION: SIMPLE_EXPRESSION RELOP_T SIMPLE_EXPRESSION" << endl); $$ = new CodeTypeNode(); $$->type = core.get_type($1->type, $3->type);
+      $$->code = $1->code + $3->code + core.add_relop($2, $$->type);
+    }
+    ;
+
+
+SIMPLE_EXPRESSION: TERM  {dd("SIMPLE_EXPRESSION: TERM" << endl); $$ = new CodeTypeNode(); $$->code = $1->code; $$->type = $1->type; }
+    | ADDOP_T TERM       {dd("SIMPLE_EXPRESSION: ADDOP_T TERM " << endl); $$ = new CodeTypeNode(); $$->code = $2->code + core.add_uniary_op($1, $2->type); $$->type = $2->type; }
+    | SIMPLE_EXPRESSION ADDOP_T TERM
+    {dd("SIMPLE_EXPRESSION: SIMPLE_EXPRESSION ADDOP_T TERM" << endl); $$ = new CodeTypeNode(); $$->type = core.get_type($3->type, $1->type ); $$->code = $1->code + $3->code + core.add_op($2, $$->type); }
+    ;
+
+
+TERM: FACTOR    {dd("TERM: FACTOR" << endl); $$ = new CodeTypeNode(); $$->code = $1->code; $$->type = $1->type; }
+    | TERM MULOP_T FACTOR
+    {dd("TERM: TERM MULOP_T FACTOR" << endl); $$ = new CodeTypeNode(); $$->type = core.get_type($1->type, $3->type); $$->code = $1->code + $3->code + core.add_op($2, $$->type); }
+    ;
+
+FACTOR: ID_T    {dd("FACTOR: ID_T" << endl); $$ = new CodeTypeNode(); $$->code = core.load_var($1); $$->type = core.get_var_type($1); }
+    | NUM_T    {dd("FACTOR: NUM_T" << endl); $$ = new CodeTypeNode(); $$->code = core.load_literal($1) ; $$->type = core.get_literal_type($1); }
+    | '(' EXPRESSION ')'    {dd("FACTOR: (EXPRESSION)" << endl); $$ = new CodeTypeNode(); $$->code = $2->code; $$->type = $2->type; }
+    ;
+
+%%
+
+int main( int argc, char **argv )
+{
+    ++argv, --argc;    /* skip over program name */
+    if ( argc > 0 )
+        yyin = fopen( argv[0], "r" );
+    else
+        yyin = stdin;
+
+    // parse through the input until there is no more:
+    do {
+        yyparse();
+    } while (!feof(yyin));
+}
+
+
+
+void yyerror(const char *s) {
+    cout << "EEK, parse error!  Message: " << s << endl;
+    cout << lineNumber << endl;
+    // might as well halt now:
+    exit(-1);
+}
+

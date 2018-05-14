@@ -1,0 +1,5 @@
+# BEXPR = BTERM BEXPR'
+# BEXPR' = 'or' BTERM BEXPR' | '\\L'
+# BTERM = BFACTOR BTERM'
+# BTERM' = 'and' BFACTOR BTERM' | '\\L'
+# BFACTOR = 'not' BFACTOR | '(' BEXPR ')' | 'true' | 'false'

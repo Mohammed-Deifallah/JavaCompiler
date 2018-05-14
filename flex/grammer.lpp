@@ -1,0 +1,58 @@
+%{
+#include <cstdio>
+#include <iostream>
+#include <string>
+using namespace std;
+#define YY_DECL extern "C" int yylex()
+
+#include "grammer.tab.hpp"  // to get the token types that we return
+
+extern int lineNumber;
+%}
+
+
+DIGIT      [0-9]
+DIGITS     {DIGIT}+
+LETTER     [a-zA-Z]
+
+ID_RE         {LETTER}({LETTER}|{DIGIT})*
+
+NUM_RE        {DIGITS}|{DIGITS}\.{DIGITS}(E{DIGITS}){0,1}
+
+RELOP_RE      \=\=|!\=|>|>\=|<|<\=
+
+ASSIGN_RE     \=
+
+PRIMITIVE_RE  boolean|int|float
+
+FLOW_RE   if|else|while
+
+PUNCT_RE  \;|\,|\(|\)|\[|\]|\{|\}
+
+ADDOP_RE  \+|\-
+
+MULOP_RE  \*|\\
+
+%%
+
+boolean   { yylval.sval = strdup(yytext); return BOOLEAN_T; }
+int       { yylval.sval = strdup(yytext); return INT_T; }
+float     { yylval.sval = strdup(yytext); return FLOAT_T; }
+
+if        { yylval.sval = strdup(yytext); return IF_T; }
+else      { yylval.sval = strdup(yytext); return ELSE_T; }
+while     { yylval.sval = strdup(yytext); return WHILE_T; }
+
+{ID_RE}       { yylval.sval = strdup(yytext); return ID_T; }
+{NUM_RE}      { yylval.sval = strdup(yytext); return NUM_T; }
+{RELOP_RE}    { yylval.sval = strdup(yytext); return RELOP_T; }
+
+{ASSIGN_RE}   { yylval.sval = strdup(yytext); return ASSIGN_T; }
+{PUNCT_RE}    { return yytext[0]; }
+{ADDOP_RE}    { yylval.cval = yytext[0]; return ADDOP_T; }
+{MULOP_RE}    { yylval.cval = yytext[0]; return MULOP_T; }
+
+[ \t]         ;
+\n            { lineNumber++; }
+.             ;
+%%

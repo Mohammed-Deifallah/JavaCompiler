@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="JavaCompiler"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\LexicalAnalyzer\;CMake Files\LexicalAnalyzerGenerator\;CMake Files\ParserGenerator\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LexicalAnalyzer">
+				<Option output="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/bin/LexicalAnalyzer.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/win8.1/CLionProjects/Compiler/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 LexicalAnalyzer"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LexicalAnalyzer/fast">
+				<Option output="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/bin/LexicalAnalyzer.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/win8.1/CLionProjects/Compiler/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 LexicalAnalyzer/fast"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LexicalAnalyzerGenerator">
+				<Option output="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/bin/LexicalAnalyzerGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/win8.1/CLionProjects/Compiler/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 LexicalAnalyzerGenerator"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LexicalAnalyzerGenerator/fast">
+				<Option output="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/bin/LexicalAnalyzerGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/win8.1/CLionProjects/Compiler/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 LexicalAnalyzerGenerator/fast"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/LexicalAnalyzerGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ParserGenerator">
+				<Option output="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/bin/ParserGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/win8.1/CLionProjects/Compiler/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 ParserGenerator"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ParserGenerator/fast">
+				<Option output="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/bin/ParserGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/win8.1/CLionProjects/Compiler/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../include/c++/7.2.0/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 ParserGenerator/fast"/>
+					<CompileFile command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/win8.1/CLionProjects/Compiler/cmake-build-debug/ParserGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/main.cpp">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/printTokensToScreen.cpp">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/printTokensToScreen.h">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/readTransitionTable.cpp">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/readTransitionTable.h">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/writeErrorLogToFile.cpp">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/writeErrorLogToFile.h">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/convertNFAToDFA.cpp">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/convertNFAToDFA.h">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/convertRulesToNFA.cpp">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/convertRulesToNFA.h">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/main.cpp">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/minimizeDFA.cpp">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/minimizeDFA.h">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/writeTransitionTable.cpp">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/writeTransitionTable.h">
+			<Option target="LexicalAnalyzerGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/Parser/ParserHandler.cpp">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/Parser/ParserHandler.h">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/Parser/PredictiveParser.cpp">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/Parser/PredictiveParser.h">
+			<Option target="LexicalAnalyzer"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/CFG.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/CFG.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/CFGModification.cpp">
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/CFGModification.h">
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/LL1Table.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/LL1Table.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/TableCreator.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/TableCreator.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/TableEntry.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/TableEntry.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/main.cpp">
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/DFATransitionTable.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/DFATransitionTable.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/ErrorLog.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/ErrorLog.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/GroupKeeper.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/GroupKeeper.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/LexicalAnalyzer.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/LexicalAnalyzer.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/NFATransitionTable.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/NFATransitionTable.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/Production.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/Production.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/Rule.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/RulesReader.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/RulesReader.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/State.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/State.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/StreamWrapper.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/StreamWrapper.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/Symbol.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/Symbol.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/Token.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/string_function.cpp">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/lib/string_function.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/allocators.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/cursorstreamwrapper.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/document.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/encodedstream.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/encodings.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/filereadstream.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/filewritestream.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/fwd.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/istreamwrapper.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/memorybuffer.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/memorystream.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/ostreamwrapper.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/pointer.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/prettywriter.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/rapidjson.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/reader.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/schema.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/stream.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/stringbuffer.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/rapidjson/writer.h">
+			<Option target="LexicalAnalyzer"/>
+			<Option target="LexicalAnalyzerGenerator"/>
+			<Option target="ParserGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\LexicalAnalyzer\"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/LexicalAnalyzerGenerator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\LexicalAnalyzerGenerator\"/>
+		</Unit>
+		<Unit filename="C:/Users/win8.1/CLionProjects/Compiler/ParserGenerator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ParserGenerator\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
